@@ -1,0 +1,64 @@
+name: "pushing the succesfull changes from fix branch to main branch and restarting the server "
+run-name: "the push was started by ${{ github.actor }} by the ${{ github.event_name }} event on ${{ github.repository }} repo."
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking out
+        uses: actions/checkout@v4
+
+      - name: "restarting the aws staging server with the changes" 
+        uses: JimCronqvist/action-ssh@master
+        with:
+          hosts: 'ubuntu@54.219.138.240'
+          privatekey: ${{secrets.EC2_ASS3_testing_staging_SERVER_SSH_ACCESS}}
+          command: |
+            export NVM_DIR=/home/ubuntu/.nvm
+            source /home/ubuntu/.nvm/nvm.sh
+            cd /home/ubuntu/CS423-devops-Assignment3/
+            git pull origin main
+            cd App/
+            sudo docker stop frontend
+            sudo docker stop backend
+            sudo docker rm frontend
+            sudo docker rm backend
+            sudo docker run -p 3000:3000 --name frontend web_image -d
+            sudo docker run -p 2000:3000 --name backend web_image -d
+            
+
+      - name: Notify on success
+        run: echo "the staging succeeded"
+        if: success()
+        # uses: dawidd6/action-send-mail@v3
+        # with:
+        #   connection_url: ${{secrets.MAIL_CONNECTION}}
+        #   server_address: smtp.gmail.com
+        #   server_port: 465
+        #   secure: true
+        #   subject: Github Action Sucess
+        #   to: saadan06@gmail.com
+        #   from: saadan06@gmail.com
+        #   body: The Workflow of repo, ${{github.repository}} initiated by ${{github.actor}} was sucessfully executed.
+       
+      - name: Notify on Failure
+        if: failure()
+        run: echo "the staging failed"
+        # uses: dawidd6/action-send-mail@v3
+        # with:
+        #   connection_url: ${{secrets.MAIL_CONNECTION}}
+        #   server_address: smtp.gmail.com
+        #   server_port: 465
+        #   secure: true
+        #   subject: Github Action Failure
+        #   to: saadan06@gmail.com
+        #   from: saadan06@gmail.com
+        #   body: The Workflow of repo ${{github.repository}} initiated by ${{github.actor}} failed, kindly check the workflow logs!
+
+

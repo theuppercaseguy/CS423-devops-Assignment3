@@ -1,0 +1,12 @@
+sudo ssh -i Assignment3_key.pem ubuntu@52.53.213.32
+sudo snap install docker
+sudo docker build -t web_app:latest .
+sudo docker run -p 3000:3000 --name frontend web_image
+
+installing node on ec2
+cd ~
+curl -sL https://deb.nodesource.com/setup_18.x -o nodesource_setup.sh
+sudo bash nodesource_setup.sh
+sudo apt install nodejs
+node -v 
+
