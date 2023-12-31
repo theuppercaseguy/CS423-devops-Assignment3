@@ -24,7 +24,6 @@ jobs:
             source /home/ubuntu/.nvm/nvm.sh
             cd /home/ubuntu/CS423-devops-Assignment3/
             git pull origin main
-            cd App/
             sudo docker stop frontend
             sudo docker stop backend
             sudo docker rm frontend
