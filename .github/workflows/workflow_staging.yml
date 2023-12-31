@@ -29,8 +29,8 @@ jobs:
             sudo docker stop backend
             sudo docker rm frontend
             sudo docker rm backend
-            sudo docker run -p 3000:3000 --name frontend web_image -d
-            sudo docker run -p 2000:3000 --name backend web_image -d
+            sudo docker run -p 3000:3000 -d --name frontend web_image
+            sudo docker run -p 2000:3000 -d --name backend web_image
             
 
       - name: Notify on success
