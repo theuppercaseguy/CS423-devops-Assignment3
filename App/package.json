@@ -1,0 +1,55 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/styles": "^4.11.4",
+    "@testing-library/jest-dom": "^5.16.2",
+    "@testing-library/react": "^12.1.2",
+    "@testing-library/user-event": "^13.5.0",
+    "axios": "^0.26.0",
+    "express": "^4.17.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^3.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "5.0.0",
+    "response-time": "^2.3.2",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "build-react": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
+    "start-node": "DISABLE_ESLINT_PLUGIN=true node index.js",
+    "test-react": "DISABLE_ESLINT_PLUGIN=true react-scripts test --coverage --watchAll=false --env=jsdom",
+    "test-API": "jest --runInBand --testTimeout 999999 --collectCoverage true api_endpoint.test.js",
+    "test": "react-scripts test src/todoTitle.mock.test.js",
+    "start": "node index.js",
+    "build": "webpack --config=Scripts/config/webpack.prod.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "eslint": "^8.54.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "supertest": "^6.2.2",
+    "webpack-cli": "^5.1.4"
+  }
+}
