@@ -1,0 +1,18 @@
+version: '3'
+services:
+  frontend:
+    container_name: frontend
+    image: web_image
+    ports:
+      - "8080:3000"
+    volumes:
+      - ./App:/web
+
+  backend:
+    container_name: backend
+    image: web_image
+    ports:
+      - "443:3000"
+    volumes:
+      - ./App:/web
+
