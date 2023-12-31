@@ -17,7 +17,7 @@ jobs:
       - name: Running tests on aws testing server
         uses: JimCronqvist/action-ssh@master
         with:
-          hosts: 'ubuntu@52.53.213.32'
+          hosts: 'ubuntu@50.18.33.165'
           privatekey: ${{secrets.EC2_ASS3_testing_staging_SERVER_SSH_ACCESS}}
           command: |
             export NVM_DIR=/home/ubuntu/.nvm

@@ -17,7 +17,7 @@ jobs:
       - name: "restarting the aws staging server with the changes" 
         uses: JimCronqvist/action-ssh@master
         with:
-          hosts: 'ubuntu@54.219.138.240'
+          hosts: 'ubuntu@13.57.223.43'
           privatekey: ${{secrets.EC2_ASS3_testing_staging_SERVER_SSH_ACCESS}}
           command: |
             export NVM_DIR=/home/ubuntu/.nvm
