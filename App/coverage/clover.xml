@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1704030866059" clover="3.2.0">
-  <project timestamp="1704030866059" name="All files">
+<coverage generated="1704031936806" clover="3.2.0">
+  <project timestamp="1704031936806" name="All files">
     <metrics statements="70" coveredstatements="51" conditionals="16" coveredconditionals="8" methods="32" coveredmethods="20" elements="118" coveredelements="79" complexity="0" loc="70" ncloc="70" packages="1" files="10" classes="10"/>
-    <file name="App.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\App.js">
+    <file name="App.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/App.js">
       <metrics statements="7" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
       <line num="8" count="6" type="stmt"/>
       <line num="9" count="6" type="stmt"/>
@@ -12,13 +12,13 @@
       <line num="21" count="0" type="stmt"/>
       <line num="23" count="0" type="stmt"/>
     </file>
-    <file name="cartItem.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\cartItem.js">
+    <file name="cartItem.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/cartItem.js">
       <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="8" count="3" type="stmt"/>
       <line num="26" count="10" type="stmt"/>
       <line num="28" count="10" type="stmt"/>
     </file>
-    <file name="cartview.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\cartview.js">
+    <file name="cartview.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/cartview.js">
       <metrics statements="21" coveredstatements="21" conditionals="8" coveredconditionals="8" methods="8" coveredmethods="8"/>
       <line num="8" count="14" type="stmt"/>
       <line num="9" count="14" type="stmt"/>
@@ -42,12 +42,12 @@
       <line num="49" count="11" type="stmt"/>
       <line num="67" count="3" type="stmt"/>
     </file>
-    <file name="index.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\index.js">
+    <file name="index.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/index.js">
       <metrics statements="2" coveredstatements="0" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
       <line num="7" count="0" type="stmt"/>
       <line num="17" count="0" type="stmt"/>
     </file>
-    <file name="msgYNModal.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\msgYNModal.js">
+    <file name="msgYNModal.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/msgYNModal.js">
       <metrics statements="9" coveredstatements="5" conditionals="4" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <line num="11" count="6" type="stmt"/>
       <line num="13" count="6" type="stmt"/>
@@ -59,7 +59,7 @@
       <line num="27" count="0" type="stmt"/>
       <line num="50" count="2" type="stmt"/>
     </file>
-    <file name="reportWebVitals.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\reportWebVitals.js">
+    <file name="reportWebVitals.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/reportWebVitals.js">
       <metrics statements="8" coveredstatements="0" conditionals="4" coveredconditionals="0" methods="2" coveredmethods="0"/>
       <line num="1" count="0" type="stmt"/>
       <line num="2" count="0" type="cond" truecount="0" falsecount="4"/>
@@ -70,7 +70,7 @@
       <line num="7" count="0" type="stmt"/>
       <line num="8" count="0" type="stmt"/>
     </file>
-    <file name="shippingOptions.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\shippingOptions.js">
+    <file name="shippingOptions.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/shippingOptions.js">
       <metrics statements="7" coveredstatements="7" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="3"/>
       <line num="9" count="6" type="stmt"/>
       <line num="11" count="6" type="stmt"/>
@@ -80,19 +80,19 @@
       <line num="25" count="1" type="stmt"/>
       <line num="35" count="2" type="stmt"/>
     </file>
-    <file name="sum.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\sum.js">
+    <file name="sum.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/sum.js">
       <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="3" count="26" type="stmt"/>
       <line num="4" count="26" type="stmt"/>
       <line num="5" count="49" type="stmt"/>
       <line num="7" count="26" type="stmt"/>
     </file>
-    <file name="todoTitle.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\todoTitle.js">
+    <file name="todoTitle.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/todoTitle.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
       <line num="4" count="2" type="stmt"/>
       <line num="5" count="2" type="stmt"/>
     </file>
-    <file name="zipcodeEntry.js" path="D:\UNI\studies\sem 7\DevOps\Finals Prep\Assignment3\App\src\zipcodeEntry.js">
+    <file name="zipcodeEntry.js" path="/home/ubuntu/CS423-devops-Assignment3/App/src/zipcodeEntry.js">
       <metrics statements="7" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="1"/>
       <line num="6" count="1" type="stmt"/>
       <line num="8" count="1" type="stmt"/>
