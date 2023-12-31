@@ -2,7 +2,7 @@ version: '3'
 services:
   frontend:
     container_name: frontend
-    image: web_image
+    image: web_image:web_app_tag
     ports:
       - "8080:3000"
     volumes:
@@ -10,7 +10,7 @@ services:
 
   backend:
     container_name: backend
-    image: web_image
+    image: web_image:web_app_tag
     ports:
       - "443:3000"
     volumes:
