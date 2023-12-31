@@ -1,0 +1,59 @@
+name: "testing the latest pull request for validation"
+run-name: "execute by ${{ github.actor }} using ${{ github.event_name }} on ${{ github.repository }} repository"
+
+on:
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:    
+  
+jobs:
+  first-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checking out
+        uses: actions/checkout@v4
+
+      - name: Running tests on aws testing server
+        uses: JimCronqvist/action-ssh@master
+        with:
+          hosts: 'ubuntu@50.18.33.165'
+          privatekey: ${{secrets.EC2_ASS3_testing_staging_SERVER_SSH_ACCESS}}
+          command: |
+            export NVM_DIR=/home/ubuntu/.nvm
+            source /home/ubuntu/.nvm/nvm.sh
+            cd /home/ubuntu/CS423-devops-Assignment3/
+            git checkout fix
+            git pull origin fix
+            cd App/
+            npm run build-react
+            npm run test-react
+            npx eslint src/App.js index.js
+
+      - name: Notify on success
+        if: success()
+        run: echo "successfulyy passed all the tests"
+        # uses: dawidd6/action-send-mail@v3
+        # with:
+        #   connection_url: ${{secrets.MAIL_CONNECTION}}
+        #   server_address: smtp.gmail.com
+        #   server_port: 465
+        #   secure: true
+        #   subject: Github Action Sucess
+        #   to: saadan06@gmail.com
+        #   from: saadan06@gmail.com
+        #   body: The Workflow of repo, ${{github.repository}} initiated by ${{github.actor}} was sucessfully executed.
+       
+      - name: Notify on Failure
+        if: failure()
+        run: echo "the test failed"
+        # uses: dawidd6/action-send-mail@v3
+        # with:
+        #   connection_url: ${{secrets.MAIL_CONNECTION}}
+        #   server_address: smtp.gmail.com
+        #   server_port: 465
+        #   secure: true
+        #   subject: Github Action Failure
+        #   to: saadan06@gmail.com
+        #   from: saadan06@gmail.com
+        #   body: The Workflow of repo ${{github.repository}} initiated by ${{github.actor}} failed, kindly check the workflow logs!
